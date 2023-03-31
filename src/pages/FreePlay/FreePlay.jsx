@@ -5,7 +5,7 @@ const freePlay = () => {
   return (
     <div className="freePlay-container">
       <header className="freePlay-header">
-        <img src={logo} alt="5-for-500-logo" />
+        <img className="freePlay-header_img" src={logo} alt="5-for-500-logo" />
       </header>
     </div>
   );
