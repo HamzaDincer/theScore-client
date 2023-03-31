@@ -4,6 +4,7 @@ import manu from "../../assets/images/Manu.png"
 import Arsenal from "../../assets/images/Arsenal.svg"
 import Liverpool from "../../assets/images/Liverpool.svg"
 import AddTeam from "../../assets/images/AddTeam.png"
+import ScoreCard from "../../assets/images/score-card.svg"
 
 function HomePage() {
   return (
@@ -17,9 +18,9 @@ function HomePage() {
             <img className='main__team' src={AddTeam}/>
         </div>
         <div className='main__scoreboard'>
-            <div className='main__scoreboard--card'>
-                <img className='main__team-symbol' src=''/>
-            </div>
+            <img className='main__scoreboard--card' src={ScoreCard}/> 
+            <img className='main__scoreboard--card' src={ScoreCard}/> 
+            <img className='main__scoreboard--card' src={ScoreCard}/> 
 
         </div>
     
