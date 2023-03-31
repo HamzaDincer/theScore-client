@@ -20,7 +20,53 @@
     &__scoreboard {
         display: flex;
         flex-direction: row;
-        padding: 1rem 0;
+        padding: 1rem 0.5rem;
         gap: 1rem;
+        overflow: hidden;
     }
+    &__live {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+    &__edit {
+        font-size: 14px;
+        line-height: 17px;
+        color: #0379FF;
+        padding: 1rem 1.3rem 0.3rem 1rem;
+
+    }
+
+    &__bet {
+        border: 0.7px solid #0379FF;
+        border-radius: 4px;
+        width: 353px;
+        height: 48px;  
+        margin-left: 1rem; 
+        display: flex;
+    }
+    &__lives {
+        padding: 1.2rem;
+        margin-left: 3rem;
+    }
+
+    &__bets {
+        width: 57.91px;
+        height: 18.53px;
+        padding: 0.9rem 0;
+    }
+
+    &__upcoming {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding: 0 1rem;
+        overflow: hidden;
+
+    }
+
+    &__news {
+        padding: 1rem 0 1rem 1rem;
+    }
+
 }
