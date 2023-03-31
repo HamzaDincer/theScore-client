@@ -4,6 +4,7 @@ import campaign from "../../assets/choose5banner.svg";
 import "./FreePlay.scss";
 import star from "../../assets/star.svg"
 
+
 // img imports
 import arsenal from '../../assets/teamLogos/arsenal.svg'
 import chelsea from '../../assets/teamLogos/chelsea.svg'
@@ -11,9 +12,12 @@ import liverpool from '../../assets/teamLogos/liverpool.svg'
 import manCity from '../../assets/teamLogos/manCity.svg'
 import manU from '../../assets/teamLogos/manU.svg'
 import norwich from '../../assets/teamLogos/norwich.svg'
+import profile from "../../assets/images/profile.svg";
+import logos from "../../assets/images/logo-speech.svg";
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
+
 
 const FreePlay = () => {
 
@@ -74,6 +78,29 @@ const FreePlay = () => {
 
 
   return (
+    <>
+    <header className="header">
+        <div className="header__row">
+          <img className="header__profile" src={profile} />
+
+          <form className="header__form">
+            <input
+              type="search"
+              placeholder="Teams, Players and News"
+              className="header__search"
+            ></input>
+          </form>
+          <img className="header__logo" src={logos} />
+        </div>
+        <div className="header__nav">
+          <div className="header__nav--link active">News</div>
+          <div className="header__nav--link">NFL</div>
+          <div className="header__nav--link">EPL</div>
+          <div className="header__nav--link">LA LIGA</div>
+          <div className="header__nav--link">UCL</div>
+          <div className="header__nav--link">SERIE A</div>
+        </div>
+      </header>
     <div className="freePlay-container">
       <header className="freePlay-header">
         <img className="freePlay-header_img" src={logo} alt="5-for-500-logo" />
@@ -128,6 +155,7 @@ const FreePlay = () => {
         </Link>
       </section>
     </div>
+    </>
   );
 };
 
