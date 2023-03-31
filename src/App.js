@@ -1,13 +1,13 @@
 import './App.scss';
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
-import Settings from './pages/Settings/Settings';
+import OddsDisplay from './pages/OddsDisplay/OddsDisplay';
 
 function App() {
   return (
     <>
     <BrowserRouter>
       <Routes>
-        <Route path='/settings' element={<Settings />}/>
+        <Route path='/oddsdisplay' element={<OddsDisplay />}/>
       </Routes>
     </BrowserRouter>
     </>
