@@ -1,5 +1,24 @@
 .freePlay {
-    &-header_img{
-        height: 2rem;
+    &-header {
+        display: flex;
+        justify-content: center;
     }
+
+    &-header_img{
+        height: 6rem;
+    display: flex;
+    flex-direction: row;
+    }
+
+    &-promo {
+        text-align: center;
+    }
+    &-campaign-img {
+        height: 14rem;
+        margin-top: 2rem;
+        width: 20rem;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+    }    
 }
