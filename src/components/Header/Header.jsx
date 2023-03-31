@@ -1,15 +1,14 @@
 import "./Header.scss";
+import profile from '../../assets/images/profile.svg';
+import logo from '../../assets/images/logo-speech.svg';
 
 const Header = () => {
     
     return (
     <header className="header">
         <div className="header__row">
-            <div className="header__profile">
-                
+            <img className="header__profile" src={profile}/>
 
-            </div>
-            <div className="header__search-container">
                 <form className="header__form"  >
                     <input
                     type="search"
@@ -17,14 +16,12 @@ const Header = () => {
                     className="header__search"
                     ></input>
                 </form>
-            </div>
-            <div className="header__logo">
-
-            </div>
+            <img className="header__logo" src={logo}/>
+                
         </div>
-        <div className="header__nav">
-            
-
+        <div className="header__nav"> 
+            <div className="header__nav--link">My Bet Home</div>
+            <div className="header__nav--link">Recommended</div>
         </div>
     </header>
     )
