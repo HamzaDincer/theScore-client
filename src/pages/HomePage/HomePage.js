@@ -6,17 +6,20 @@ import Liverpool from "../../assets/images/Liverpool.svg"
 import AddTeam from "../../assets/images/AddTeam.png"
 import ScoreCard from "../../assets/images/score-card.svg"
 import LiveUSA from "../../assets/images/Live-American.svg"
+import LiveFract from "../../assets/images/livefract.svg"
 import sbet from "../../assets/images/sbet.svg"
 import live from "../../assets/images/live.svg"
 import upcoming from "../../assets/images/upcoming.svg"
 import Recommended from "../../assets/images/recommend.svg"
-import news from "../../assets/images/newss.svg"
+import news from "../../assets/images/news.svg"
 import recteams from "../../assets/images/rec_teams.svg"
 import footer from "../../assets/images/footer.svg"
 import { Link } from 'react-router-dom'
 import ScoreEU from "../../assets/images/scoreEU.svg"
 import upcomingEU from "../../assets/images/upcomingEU.svg"
 import recommendEU from "../../assets/images/recommendEU.svg"
+import UpcomingFract from "../../assets/images/upcomingfract.svg"
+import RecFract from "../../assets/images/recfrac.svg"
 
 function HomePage({oddsType}) {
     console.log(oddsType)
@@ -46,6 +49,8 @@ function HomePage({oddsType}) {
                         return LiveUSA;
                         case 'decimal':
                         return ScoreEU;
+                        case 'fractional':
+                        return LiveFract;
                         default:
                         return LiveUSA;
                     }
@@ -57,6 +62,8 @@ function HomePage({oddsType}) {
                     return LiveUSA;
                     case 'decimal':
                     return ScoreEU;
+                    case 'fractional':
+                    return LiveFract;
                     default:
                     return LiveUSA;
                 }
@@ -75,6 +82,8 @@ function HomePage({oddsType}) {
                         return upcoming;
                         case 'decimal':
                         return upcomingEU;
+                        case 'fractional':
+                        return UpcomingFract;
                         default:
                         return upcoming;
                     }
@@ -86,6 +95,8 @@ function HomePage({oddsType}) {
                 return upcoming;
                 case 'decimal':
                 return upcomingEU;
+                case 'fractional':
+                return UpcomingFract;
                 default:
                 return upcoming;
             }
@@ -101,6 +112,8 @@ function HomePage({oddsType}) {
                 return Recommended;
                 case 'decimal':
                 return recommendEU;
+                case 'fractional':
+                return RecFract;
                 default:
                 return Recommended;
             }
@@ -112,6 +125,8 @@ function HomePage({oddsType}) {
                 return Recommended;
                 case 'decimal':
                 return recommendEU;
+                case 'fractional':
+                return RecFract;
                 default:
                 return Recommended;
             }
@@ -125,7 +140,13 @@ function HomePage({oddsType}) {
           
         </div>
         <footer>
-            <img className='main__footer' src={footer}/> 
+                <div className='main__footer-container'>
+                <Link to="/news" className='main__news-link'>
+                <div className='main__footer-overlay'></div> {/* clickable overlay */}
+                </Link>
+                <img className='main__footer' src={footer}/> 
+                </div>
+         
         </footer>
     </div>
   );

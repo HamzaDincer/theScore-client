@@ -84,6 +84,27 @@
         flex-wrap: nowrap; /* prevent images from wrapping to new lines */
         overflow-x: scroll; /* enable horizontal scrolling */
         scroll-behavior: smooth; /* smooth scrolling effect */
+
     }
 
 }
+.main__footer-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .main__footer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%; /* set the width of the clickable area */
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .main__footer {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
