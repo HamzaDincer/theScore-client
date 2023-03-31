@@ -1,0 +1,42 @@
+@use '../../styles/partials/variables' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.odds {
+    background-color: $score-darkblack;
+    color: white;
+    height: 100%;
+    padding: 2rem 1rem;
+    height: 100vh;
+
+    &__list {
+        background-color: $score-lightblack;
+        border: 0.03125rem solid $mercury;
+        border-radius: 0.25rem;
+    }
+
+    &__item {
+        height: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem 1rem;
+    }
+
+    &__text {
+        font-size: 0.5rem;
+    }
+
+    &__active {
+        width: 0.5rem;
+    }
+
+    &__divider {
+        width: 100%;
+        border-bottom: 0.03125rem solid $mercury;
+    }
+}

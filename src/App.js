@@ -1,14 +1,25 @@
 import './App.scss';
 import Profile from './pages/Profile/Profile.js';
+import { useState } from 'react'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import OddsDisplay from './pages/OddsDisplay/OddsDisplay';
 import Header from './components/Header/Header';
 import HomePage from './pages/HomePage/HomePage';
 
 function App() {
+
+  const [oddsType, setOddsType] = useState('american')
+
   return (
     <>
       <Profile/>
+    <BrowserRouter>
     <Header />
-    <HomePage/>
+      <Routes>
+        <Route path='/' element={<HomePage/>} />
+        <Route path='/oddsdisplay' element={<OddsDisplay oddsType={oddsType} setOddsType={setOddsType} />}/>
+      </Routes>
+    </BrowserRouter>
     </>
   );
 }
