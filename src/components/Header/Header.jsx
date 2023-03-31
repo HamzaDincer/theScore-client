@@ -20,7 +20,7 @@ const Header = () => {
                 
         </div>
         <div className="header__nav"> 
-            <div className="header__nav--link">My Bet Home</div>
+            <div className="header__nav--link active">My Bet Home</div>
             <div className="header__nav--link">Recommended</div>
         </div>
     </header>
