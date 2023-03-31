@@ -1,0 +1,19 @@
+.main {
+
+    &__title {
+        font-size: 14px;
+        line-height: 17px;
+        padding: 1rem 1.3rem 0.3rem 1rem;
+    }
+
+    &__team-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    &__team {
+        width: 56px;
+        height: 56.84px;
+    }
+}
