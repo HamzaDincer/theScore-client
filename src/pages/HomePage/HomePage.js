@@ -5,6 +5,14 @@ import Arsenal from "../../assets/images/Arsenal.svg"
 import Liverpool from "../../assets/images/Liverpool.svg"
 import AddTeam from "../../assets/images/AddTeam.png"
 import ScoreCard from "../../assets/images/score-card.svg"
+import LiveUSA from "../../assets/images/Live-American.svg"
+import sbet from "../../assets/images/sbet.svg"
+import live from "../../assets/images/live.svg"
+import upcoming from "../../assets/images/upcoming.svg"
+import Recommended from "../../assets/images/recommend.svg"
+import news from "../../assets/images/newss.svg"
+import recteams from "../../assets/images/rec_teams.svg"
+import footer from "../../assets/images/footer.svg"
 
 function HomePage() {
   return (
@@ -21,9 +29,39 @@ function HomePage() {
             <img className='main__scoreboard--card' src={ScoreCard}/> 
             <img className='main__scoreboard--card' src={ScoreCard}/> 
             <img className='main__scoreboard--card' src={ScoreCard}/> 
-
         </div>
-    
+        <div className='main__live'>
+            <h1 className='main__title'>Live Games</h1>
+            <h1 className='main__edit'>Edit Odd Display</h1>
+        </div>
+        <div className='main__scoreboard'>
+            <img className='main__scoreboard--card' src={LiveUSA}/> 
+            <img className='main__scoreboard--card' src={LiveUSA}/> 
+        </div>
+        <div className='main__bet'>
+            <img className='main__lives' src={live}/>
+            <img className='main__bets' src={sbet}/>
+        </div>
+        <h1 className='main__title'>Upcoming Matches</h1>
+        <div className='main__upcoming'>
+            <img className='main__scoreboard--card' src={upcoming}/> 
+            <img className='main__scoreboard--card' src={upcoming}/> 
+           
+        </div>
+        <h1 className='main__title'>Recommended Matches</h1>
+        <div className='main__upcoming'>
+            <img className='main__scoreboard--card' src={Recommended}/> 
+            <img className='main__scoreboard--card' src={Recommended}/>   
+        </div>
+        <img className='main__news' src={news}/>  
+        <h1 className='main__title'>Recommended Teams</h1>
+        <div className='main__upcoming'>
+            <img className='main__scoreboard--card' src={recteams}/> 
+          
+        </div>
+        <footer>
+            <img className='main__footer' src={footer}/> 
+        </footer>
     </div>
   );
 }
