@@ -1,0 +1,107 @@
+@use "../../styles/partials/variables" as *;
+
+.image {
+    &__container{
+        padding-top:1rem;
+        padding-left: 0.5rem;
+        
+        width: 40px;
+        height: 40px;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+
+.profile {
+    background-color: $Background-Black;
+    color: white;
+    max-height: 500px;
+  
+
+    &__user {
+        background-color: $Background-Black;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    &__subheader1 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    &__subheader2 {
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &__description {
+        width: 70%;
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+
+    &__align {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__header {
+        background-color: $Favorites-Black;
+        display: flex;
+        gap: 30%;
+    }
+
+    &__title {
+        padding: 1rem 0rem;
+        font-size: large;
+    }
+
+    &__options {
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    &__avatar {
+        width: 82px;
+        height: 100x;
+        padding-top: 1rem;
+        
+
+        img{ 
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 1rem;
+        }
+    }
+
+    &__buttons {
+        padding: 1rem;
+        &--login  {
+            width: 50%;
+            background-color: $Login-Black;
+            height: 41px;
+            border-radius: 6px;
+            color: white;
+            
+
+          
+        }
+
+        &--signup {
+            width: 50%;
+            background-color: $Score-Blue;
+            height: 41px;
+            border-radius: 6px;
+            color: white;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,14 +1,14 @@
 import "./Header.scss";
 import profile from '../../assets/images/profile.svg';
 import logo from '../../assets/images/logo-speech.svg';
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     
     return (
     <header className="header">
         <div className="header__row">
-            <img className="header__profile" src={profile}/>
-
+            <Link to="/profile"><img className="header__profile" src={profile}/></Link>
                 <form className="header__form"  >
                     <input
                     type="search"
@@ -16,8 +16,7 @@ const Header = () => {
                     className="header__search"
                     ></input>
                 </form>
-            <img className="header__logo" src={logo}/>
-                
+            <Link to='/'><img className="header__logo" src={logo}/> </Link>   
         </div>
         <div className="header__nav"> 
             <div className="header__nav--link active">My Bet Home</div>
