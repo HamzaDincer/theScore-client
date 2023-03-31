@@ -22,12 +22,17 @@
     &__item {
         height: 2rem;
         display: flex;
+        justify-content: space-between;
         align-items: center;
         padding: 1.25rem 1rem;
     }
 
     &__text {
         font-size: 0.5rem;
+    }
+
+    &__active {
+        width: 0.5rem;
     }
 
     &__divider {
