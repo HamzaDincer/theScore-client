@@ -3,7 +3,6 @@ import Profile from './pages/Profile/Profile.js';
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import OddsDisplay from './pages/OddsDisplay/OddsDisplay';
-import Header from './components/Header/Header';
 import HomePage from './pages/HomePage/HomePage';
 import FreePlay from './pages/FreePlay/FreePlay';
 

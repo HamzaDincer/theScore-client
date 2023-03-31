@@ -1,11 +1,14 @@
 
 import "./OddsDisplay.scss"
 import activeGreen from '../../assets/active-circle.svg'
+import Header from "../../components/Header/Header"
 
 
 export default function OddsDisplay({ oddsType, setOddsType }) {
 
     return (
+        <>
+        <Header/>
         <main className='odds'>    
             <ul className='odds__list'>
                 <li onClick={() => {setOddsType('decimal')}} className='odds__item'>
@@ -24,5 +27,6 @@ export default function OddsDisplay({ oddsType, setOddsType }) {
                 </li>
             </ul>
         </main>
+        </>
     )
 }

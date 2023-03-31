@@ -2,13 +2,16 @@ import Back from "../../assets/chevron-back-outline.svg";
 import "./Profile.scss";
 import User from "../../assets/avatar.png";
 import Right from "../../assets/iconmonstr-arrow-right-thin.svg";
+import { Link } from 'react-router-dom'
 
 export default function Profile() {
   return (
     <div className="profile">
       <div className="profile__header">
         <div className="image__container">
+          <Link to="/">
           <img src={Back} alt="wee"></img>
+          </Link>
         </div>
         <h1 className="profile__title">Profile</h1>
       </div>
@@ -27,7 +30,9 @@ export default function Profile() {
       <p className="profile__subheader1"> Personalisation </p>
       <ul className="odds__list">
         <li onClick={"qwe"} className="odds__item">
-          <p style={{ fontSize:14}}>OddsDisplay</p>
+          <Link to="/oddsdisplay">
+          <p style={{ fontSize:14, color:"white"}}>OddsDisplay</p>
+          </Link>
 
           <img src={Right} alt="" width = {12}></img>
         </li>

@@ -20,10 +20,13 @@ import upcomingEU from "../../assets/images/upcomingEU.svg"
 import recommendEU from "../../assets/images/recommendEU.svg"
 import UpcomingFract from "../../assets/images/upcomingfract.svg"
 import RecFract from "../../assets/images/recfrac.svg"
+import Header from "../../components/Header/Header"
 
 function HomePage({oddsType}) {
     console.log(oddsType)
   return (
+    <>
+    <Header/>
     <div className='main'>
         <h1 className='main__title'>My Teams</h1>
         <div className='main__team-list'>
@@ -149,6 +152,7 @@ function HomePage({oddsType}) {
          
         </footer>
     </div>
+    </>
   );
 }
 
