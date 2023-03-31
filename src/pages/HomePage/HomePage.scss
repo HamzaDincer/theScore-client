@@ -16,4 +16,11 @@
         width: 56px;
         height: 56.84px;
     }
+
+    &__scoreboard {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
 }
