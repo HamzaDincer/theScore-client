@@ -2,9 +2,15 @@ import Back from "../../assets/chevron-back-outline.svg";
 import "./Profile.scss";
 import User from "../../assets/avatar.png";
 import Right from "../../assets/iconmonstr-arrow-right-thin.svg";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Profile() {
+  const navigate = useNavigate();
+
+  const handleOddsDisplayClick = () => {
+    navigate('/oddsdisplay');
+  };
+
   return (
     <div className="profile">
       <div className="profile__header">
@@ -29,21 +35,18 @@ export default function Profile() {
     <div className="profile__options">
       <p className="profile__subheader1"> Personalisation </p>
       <ul className="odds__list">
-        <li onClick={"qwe"} className="odds__item">
-          <Link to="/oddsdisplay">
+        <li className="odds__item" onClick={handleOddsDisplayClick} >    
           <p style={{ fontSize:14, color:"white"}}>OddsDisplay</p>
-          </Link>
-
-          <img src={Right} alt="" width = {12}></img>
+          <img src={Right} alt="" width = {12}></img> 
         </li>
         <div className="odds__divider" />
-        <li onClick={"QWe"} className="odds__item">
+        <li className="odds__item">
           <p style={{ fontSize:14}}>Teams</p>
 
           <img src={Right} alt="" width = {12}></img>
         </li>
         <div className="odds__divider" />
-        <li onClick={"qwe"} className="odds__item">
+        <li className="odds__item">
           <p style={{ fontSize:14}}>Currency</p>
 
           <img src={Right} alt="" width = {12}></img>
@@ -51,19 +54,19 @@ export default function Profile() {
       </ul>
       <p className="profile__subheader2"> Shortcuts </p>
       <ul className="odds__list">
-        <li onClick={"qwe"} className="odds__item">
+        <li className="odds__item">
           <p style={{ fontSize:14}}>Favorites</p>
           <img src={Right} alt="" width = {12}></img>
 
         </li>
         <div className="odds__divider" />
-        <li onClick={"QWe"} className="odds__item">
+        <li  className="odds__item">
           <p style={{ fontSize:14}}>Bookmarks</p>
           <img src={Right} alt="" width = {12}></img>
 
         </li>
         <div className="odds__divider" />
-        <li onClick={"qwe"} className="odds__item">
+        <li className="odds__item">
           <p style={{ fontSize:14}}>Leagues</p>
           <img src={Right} alt="" width = {12}></img>
 
