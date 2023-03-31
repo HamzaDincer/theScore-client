@@ -5,6 +5,7 @@ import OddsDisplay from './pages/OddsDisplay/OddsDisplay';
 import Header from './components/Header/Header';
 import HomePage from './pages/HomePage/HomePage';
 import FreePlay from './pages/FreePlay/FreePlay';
+import Submit from './pages/Submit/Submit';
 
 function App() {
   const [oddsType, setOddsType] = useState('american')
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<HomePage oddsType={oddsType}/>} />
         <Route path='/oddsdisplay' element={<OddsDisplay oddsType={oddsType} setOddsType={setOddsType} />}/>
         <Route path='/freeplay' element={<FreePlay/>} />
+        <Route path='/submit' element={<Submit/>} />
       </Routes>
     </BrowserRouter>
     </>
