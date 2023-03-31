@@ -3,7 +3,7 @@ import "./OddsDisplay.scss"
 export default function OddsDisplay() {
 
     return (
-        <main className='odds'>
+        <main className='odds'>    
             <ul className='odds__list'>
                 <li className='odds__item'>
                     <p className='odds__text'>Decimal</p>
