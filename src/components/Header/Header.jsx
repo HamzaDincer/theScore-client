@@ -9,7 +9,6 @@ const Header = () => {
     <header className="header">
         <div className="header__row">
             <Link to="/profile"><img className="header__profile" src={profile}/></Link>
-
                 <form className="header__form"  >
                     <input
                     type="search"
@@ -17,8 +16,7 @@ const Header = () => {
                     className="header__search"
                     ></input>
                 </form>
-            <Link to='/'><img className="header__logo" src={logo}/> </Link>
-                
+            <Link to='/'><img className="header__logo" src={logo}/> </Link>   
         </div>
         <div className="header__nav"> 
             <div className="header__nav--link active">My Bet Home</div>
