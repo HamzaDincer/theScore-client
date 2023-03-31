@@ -13,8 +13,13 @@ import Recommended from "../../assets/images/recommend.svg"
 import news from "../../assets/images/newss.svg"
 import recteams from "../../assets/images/rec_teams.svg"
 import footer from "../../assets/images/footer.svg"
+import { Link } from 'react-router-dom'
+import ScoreEU from "../../assets/images/scoreEU.svg"
+import upcomingEU from "../../assets/images/upcomingEU.svg"
+import recommendEU from "../../assets/images/recommendEU.svg"
 
-function HomePage() {
+function HomePage({oddsType}) {
+    console.log(oddsType)
   return (
     <div className='main'>
         <h1 className='main__title'>My Teams</h1>
@@ -32,11 +37,31 @@ function HomePage() {
         </div>
         <div className='main__live'>
             <h1 className='main__title'>Live Games</h1>
-            <h1 className='main__edit'>Edit Odd Display</h1>
+            <Link to="/oddsdisplay"><h1 className='main__edit'>Edit Odd Display</h1> </Link>
         </div>
         <div className='main__scoreboard'>
-            <img className='main__scoreboard--card' src={LiveUSA}/> 
-            <img className='main__scoreboard--card' src={LiveUSA}/> 
+            <img className='main__scoreboard--card' src={(() => {
+                    switch (oddsType) {
+                        case 'american':
+                        return LiveUSA;
+                        case 'decimal':
+                        return ScoreEU;
+                        default:
+                        return LiveUSA;
+                    }
+                    })()
+                }/>
+            <img className='main__scoreboard--card' src={(() => {
+                switch (oddsType) {
+                    case 'american':
+                    return LiveUSA;
+                    case 'decimal':
+                    return ScoreEU;
+                    default:
+                    return LiveUSA;
+                }
+                })()
+            }/>
         </div>
         <div className='main__bet'>
             <img className='main__lives' src={live}/>
@@ -44,14 +69,54 @@ function HomePage() {
         </div>
         <h1 className='main__title'>Upcoming Matches</h1>
         <div className='main__upcoming'>
-            <img className='main__scoreboard--card' src={upcoming}/> 
-            <img className='main__scoreboard--card' src={upcoming}/> 
+            <img className='main__scoreboard--card' src={(() => {
+                    switch (oddsType) {
+                        case 'american':
+                        return upcoming;
+                        case 'decimal':
+                        return upcomingEU;
+                        default:
+                        return upcoming;
+                    }
+                    })()
+                }/>
+            <img className='main__scoreboard--card' src={(() => {
+            switch (oddsType) {
+                case 'american':
+                return upcoming;
+                case 'decimal':
+                return upcomingEU;
+                default:
+                return upcoming;
+            }
+            })()
+            }/>
            
         </div>
         <h1 className='main__title'>Recommended Matches</h1>
         <div className='main__upcoming'>
-            <img className='main__scoreboard--card' src={Recommended}/> 
-            <img className='main__scoreboard--card' src={Recommended}/>   
+        <img className='main__scoreboard--card' src={(() => {
+            switch (oddsType) {
+                case 'american':
+                return Recommended;
+                case 'decimal':
+                return recommendEU;
+                default:
+                return Recommended;
+            }
+            })()
+            }/>
+            <img className='main__scoreboard--card' src={(() => {
+            switch (oddsType) {
+                case 'american':
+                return Recommended;
+                case 'decimal':
+                return recommendEU;
+                default:
+                return Recommended;
+            }
+            })()
+            }/>
         </div>
         <img className='main__news' src={news}/>  
         <h1 className='main__title'>Recommended Teams</h1>

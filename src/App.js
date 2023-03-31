@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
     <Header />
       <Routes>
-        <Route path='/' element={<HomePage/>} />
+        <Route path='/' element={<HomePage oddsType={oddsType}/>} />
         <Route path='/oddsdisplay' element={<OddsDisplay oddsType={oddsType} setOddsType={setOddsType} />}/>
         <Route path='/freeplay' element={<FreePlay/>} />
       </Routes>
