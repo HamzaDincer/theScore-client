@@ -9,6 +9,7 @@ import share from "../../assets/share.svg";
 import bookmark from "../../assets/bookmark.svg";
 import buttonComp from "../../assets/buttonComp.svg";
 import button from "../../assets/button.svg";
+import footer from "../../assets/images/footer.svg"
 import { Link } from "react-router-dom";
 
 const NewsPage = () => {
@@ -16,7 +17,7 @@ const NewsPage = () => {
     <>
       <header className="header">
         <div className="header__row">
-          <img className="header__profile" src={profile} />
+        <Link to="/profile"><img className="header__profile" src={profile}/></Link>
 
           <form className="header__form">
             <input
@@ -25,7 +26,7 @@ const NewsPage = () => {
               className="header__search"
             ></input>
           </form>
-          <img className="header__logo" src={logo} />
+          <Link to='/'><img className="header__logo" src={logo}/> </Link>  
         </div>
         <div className="header__nav">
           <div className="header__nav--link active">News</div>
@@ -54,6 +55,15 @@ const NewsPage = () => {
           <img src={button} alt="the score metadata" />
         </Link>
       </div>
+      <footer>
+                <div className='main__footer-container'>
+                <Link to="/news" className='main__news-link'>
+                <div className='main__footer-overlay'></div> {/* clickable overlay */}
+                </Link>
+                <img className='main__footer' src={footer}/> 
+                </div>
+         
+        </footer>
     </>
   );
 };

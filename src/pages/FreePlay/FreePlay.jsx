@@ -79,9 +79,9 @@ const FreePlay = () => {
 
   return (
     <>
-    <header className="header">
+     <header className="header">
         <div className="header__row">
-          <img className="header__profile" src={profile} />
+        <Link to="/profile"><img className="header__profile" src={profile}/></Link>
 
           <form className="header__form">
             <input
@@ -90,7 +90,7 @@ const FreePlay = () => {
               className="header__search"
             ></input>
           </form>
-          <img className="header__logo" src={logos} />
+          <Link to='/'><img className="header__logo" src={logo}/> </Link>  
         </div>
         <div className="header__nav">
           <div className="header__nav--link active">News</div>
