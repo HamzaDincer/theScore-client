@@ -12,12 +12,11 @@ function App() {
 
   return (
     <>
-      <Profile/>
     <BrowserRouter>
-    <Header />
       <Routes>
         <Route path='/' element={<HomePage/>} />
         <Route path='/oddsdisplay' element={<OddsDisplay oddsType={oddsType} setOddsType={setOddsType} />}/>
+        <Route path='/profile' element = {<Profile/>} />
       </Routes>
     </BrowserRouter>
     </>
